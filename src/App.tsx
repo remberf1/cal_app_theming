@@ -140,7 +140,7 @@ function App() {
       <div className="max-w-[400px] mx-auto lg:max-w-xl flex flex-col flex-grow">
 
         <div className="flex items-start justify-between pb-6">
-          <p className="text-2xl">calc</p>
+          <p className="text-2xl font-bold">calc</p>
 
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-4 cursor-pointer" onClick={toggleTheme}>
