@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 :root {
@@ -15,6 +13,7 @@
   --key-shadow-light: hsl(28, 16%, 65%);
   --text-primary: hsl(0, 100%, 100%);
   --text-secondary: hsl(221, 14%, 31%);
+  --text-wide: hsl(0, 100%, 100%);
 }
 
 /* Theme 1 */
@@ -30,6 +29,8 @@
   --key-shadow-light: hsl(28, 16%, 65%);
   --text-secondary: hsl(0, 100%, 100%);
   --text-primary: hsl(221, 14%, 31%);
+  --text-wide: hsl(0, 100%, 100%);
+  --text-input:hsl(0, 100%, 100%);
 }
 
 /* Theme 2 */
@@ -45,6 +46,8 @@
   --key-shadow-light: hsl(35, 11%, 61%);
   --text-primary: hsl(60, 10%, 19%);
   --text-secondary: hsl(0, 100%, 100%);
+  --text-wide: hsl(0, 100%, 100%);
+   --text-input:hsl(60, 10%, 19%);
 }
 
 /* Theme 3 */
@@ -60,15 +63,16 @@
   --key-shadow-light: hsl(290, 70%, 36%);
   --text-primary: hsl(52, 100%, 62%);
   --text-secondary: hsl(0, 100%, 100%);
+  --text-wide: hsl(268, 47%, 21%);
+   --text-input:hsl(52, 100%, 62%);
 }
 
 /* Base button style */
 .btn {
-  @apply rounded-lg text-xl font-bold select-none cursor-pointer flex items-center justify-center w-14 h-14;
+  @apply rounded-lg text-2xl font-bold select-none cursor-pointer flex items-center justify-center w-full h-14;
   color: var(--text-primary);
   background-color: var(--key-bg-light);
   box-shadow: 0 4px var(--key-shadow-light);
-  padding: 1rem 0; /* You can adjust/remove this if needed */
   transition: background-color 0.3s ease;
   
 }
@@ -86,12 +90,22 @@
 
 /* Accent 2 button style */
 .btn-accent-2 {
-background-color: var(--key-bg-light);
-box-shadow: 0 4px var(--key-shadow-light);
+background-color: var(--key-bg-accent);
+box-shadow: 0 4px var(--key-shadow-accent);
   color: var(--text-primary);
 }
 
 /* Wide button spans 2 columns in grid */
 .btn-wide {
   grid-column: span 2 / span 2;
+  width: 100% !important;
+  border-radius: 0.50rem;
+ 
+}
+.btn-equal{
+   color: var(--text-wide);
+}
+
+.input{
+color: var(--text-input);
 }

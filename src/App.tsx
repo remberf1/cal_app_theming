@@ -15,7 +15,9 @@ function App() {
   };
 
   return (
-    <div className="bg-[var(--bg-main)] text-[var(--text-primary)] h-screen p-4">
+    <div className="bg-[var(--bg-main)] text-[var(--text-input)] min-h-screen p-4 ">
+      <div className='max-w-[400px] mx-auto lg:max-w-xl'>
+
       <div className="flex items-start justify-between pb-6">
         <p className="text-2xl">calc</p>
 
@@ -28,7 +30,7 @@ function App() {
             {/* Switch block */}
             <div className="flex flex-col items-center">
               {/* Numbers above switch */}
-              <div className="flex justify-between w-[60px] px-1 text-xs text-white mb-1">
+              <div className="flex justify-between w-[60px] px-1 text-xs text-[var(--text-input)] mb-1">
                 <span>1</span>
                 <span>2</span>
                 <span>3</span>
@@ -48,29 +50,33 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='h-[calc(100vh-350px)] bg-[var(--bg-screen)] rounded-xl flex items-center justify-end mb-4 '>
-        <p className='text-5xl pr-4'>kl99</p>
+      <div className='flex-1 min-h-[100px] bg-[var(--bg-screen)] rounded-xl flex items-center justify-end mb-6 '>
+        <p className='text-5xl text-[var(--text-input)] pr-4'>kl99</p>
       </div>
-      <div className='bg-[var(--bg-toggle)] rounded-xl grid grid-cols-4 gap-2 px-2'>
+      <div className='bg-[var(--bg-toggle)] rounded-xl grid grid-cols-4 gap-4 px-6 py-8'>
        <button className="btn ">7</button>
        <button className="btn ">8</button>
        <button className="btn ">9</button>
        <button className="btn btn-accent-1 uppercase">del</button>
+
        <button className="btn ">4</button>
        <button className="btn ">5</button>
        <button className="btn ">6</button>
        <button className="btn ">+</button>
+
        <button className="btn ">1</button>
        <button className="btn ">2</button>
        <button className="btn ">3</button>
        <button className="btn ">-</button>
+
        <button className="btn ">.</button>
        <button className="btn ">0</button>
-       <button className="btn ">=</button>
+       <button className="btn ">/</button>
        <button className="btn">x</button>
-       <button className='btn btn-accent-1 btn-wide'>Reset</button>
-       <button>=</button>
 
+       <button className=' h-[14] btn btn-accent-1 uppercase btn-wide'>Reset</button>
+       <button className='h-[14] btn-accent-2 btn-wide btn-equal'>=</button>
+      </div>
       </div>
     </div>
   );
